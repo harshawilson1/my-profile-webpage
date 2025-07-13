@@ -569,3 +569,15 @@ input[type="radio"] {
   }
   }
 }
+form .button-group {
+  display: flex;
+  gap: 1rem; /* space between buttons */
+  justify-content: center; /* center buttons horizontally */
+  margin-top: 1rem;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+  flex: 1; /* make buttons equal width */
+  max-width: 150px; /* optional max width */
+}
