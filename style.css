@@ -4,10 +4,10 @@
   border: 20px solid #040df7; /* Light grey */
   border-radius: 50%;
   animation: spin 1s linear infinite;
-
   border-top: 20px rgb(13, 13, 16);
 }
-    body {
+
+body {
   margin: 0;
   background: linear-gradient(135deg, #121212, #2a1a3e);
   color: #f0f0f0;
@@ -487,5 +487,85 @@ input[type="radio"] {
   }
   .about-image {
     font-size: 5rem;
+  }
+}
+@media (max-width: 600px) {
+  form {
+    padding: 1.25rem 1rem;
+  }
+
+  form input,
+  form textarea {
+    font-size: 1rem;
+  }
+
+  form input[type="submit"],
+  form input[type="reset"] {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 600px) {
+  form input,
+  form textarea {
+    font-size: 1rem;
+    padding: 0.5rem; /* reduce padding for smaller screens */
+  }
+
+  form input[type="submit"],
+  form input[type="reset"] {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+/* Make form full width with padding on small screens */
+@media (max-width: 600px) {
+  form {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box; /* ensure padding included in width */
+    max-width: none; /* remove max-width limit */
+  }
+
+  form input,
+  form textarea {
+    font-size: 1rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+
+  form input[type="submit"],
+  form input[type="reset"] {
+    width: 48%; /* buttons side-by-side but fit smaller screens */
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Stack buttons vertically on very small screens */
+  @media (max-width: 360px) {
+    form input[type="submit"],
+    form input[type="reset"] {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .carousel-container {
+    padding: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .carousel-slide {
+    flex: 0 0 80%; /* fewer slides visible, bigger slides */
+    font-size: 1rem; /* slightly smaller font */
+    padding: 1rem;
+  }
+  @media (max-width: 700px) {
+  .carousel-track {
+    animation: scroll-left 40s linear infinite; /* slower for mobile */
+  }
   }
 }
